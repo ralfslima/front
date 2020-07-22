@@ -1,0 +1,13 @@
+1) Crie uma pasta e adicione os arquivos que deseja enviar ao Github.
+
+2) Ceritifique que tenha o Git instalado (https://git-scm.com)
+
+3) Utilize os comandos:
+
+     a) git init
+     b) git add .
+     c) git commit -m "Enviando arquivos"
+     d) git remote add origin https://github.com/user/repo.git 
+     e) git push origin master
+
+4) Verifique no seu repositório do Github os arquivos :)
