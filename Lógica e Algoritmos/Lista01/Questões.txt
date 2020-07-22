@@ -1,0 +1,52 @@
+1) O usuário informa duas notas, exiba a média e a sua situação. 
+Se a média for maior ou igual a 7 exiba a situação APROVADO, caso contrário REPROVADO.
+
+
+2) Será pedido para o cliente informar um número correspondente ao pedido:
+    1) Pizza  		 - R$12,00
+    2) Pão de Queijo - R$4,00
+    3) Macarrão 	 - R$16,00
+    4) Pastel 		 - R$ 4.50
+Em seguida peça o valor que será pago pelo cliente, em seguida informe o troco.
+Valide caso o cliente informe um valor inferior ao pedido.
+
+
+3) Verificar se é um quadrado. O usuário informa as dimensões de cada um dos quatro lados.
+
+
+4) Será pedida a quantidade de cada moeda, em seguida exiba o total.
+R$ 0,01 - 1
+R$ 0,05 - 1
+R$ 0,10 - 1
+R$ 0,25 - 1
+R$ 0,50 - 1
+R$ 1,00 - 1
+----------------
+R$ 1,91
+
+
+5) Serão pedidos dois números. Se forem iguais realize a soma, caso contrário faça a multiplicação.
+
+
+6) Peça a dimensão de cada lado de um triângulo, retorne qual triângulo representa de acordo com as dimensões.
+Isósceles    - Dois lados iguais e um diferente
+Escaleno   - As três medidas são diferentes
+Equilátero  - Os três lados iguais
+
+
+7) O usuário informa dois números, em seguida poderá escolher um cálculo que pode ser
+*soma
+*subtração
+*multiplicação
+*divisão
+
+
+8) Será pedido ao aluno as três notas e a quantidade de faltas.
+Se as faltas forem superiores a 15 o aluno está reprovado, caso contrário exiba
+a situação dependendo da nota:
+7 - 10:  Aprovado
+5 - 6.9: Em exame
+0 - 4.9: Reprovado
+
+
+9) O usuário irá pedir três números, exiba qual o menor dos três.
