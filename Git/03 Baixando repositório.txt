@@ -6,4 +6,4 @@
      b) git remote add origin https://github.com/user/repo.git 
      c) git pull origin master
 
-3) Os arquivos terão sido importados e o vínculo com o diretório feito.
+3) Os arquivos terão sido importados e o vínculo com o repositório feito.
