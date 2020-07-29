@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>O8 - Exercício</title>
+
+    <script>
+        
+        // Obter três notas e a quantidade de faltas
+        var nota1 = parseFloat(prompt("Informe a primeira nota"))
+        var nota2 = parseFloat(prompt("Informe a segunda nota"))
+        var nota3 = parseFloat(prompt("Informe a terceira nota"))
+        var faltas = parseInt(prompt("Informe suas faltas"))
+
+        // Cálculo de média
+        var media = (nota1+nota2+nota3)/3
+
+        // Condicional
+        if(faltas > 15){
+            document.write("Reprovado por faltas")
+        }else if(media >= 7){
+            document.write("Aprovado com média "+media)
+        }else if(media >= 5){
+            document.write("Em exame com média "+media)
+        }else{
+            document.write("Reprovado com média "+media)
+        }
+
+    </script>
+    
+</head>
+<body>
+    
+</body>
+</html>

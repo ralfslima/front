@@ -1,0 +1,11 @@
+HTML: Linguagem de marcação, onde os elementos são exibidos no navegador.
+
+CSS:  Linguagem para estilos, onde alteramos características como: bordas, fontes, cores, animações, sombras...
+
+JavaScript: Linguagem de interatividade, onde é possível realizar ações.
+
+Tag: Comandos HTML.
+
+Lógica: Pensar em alternativas para resolver algum problema (projeto).
+
+Algoritmos: Explicar o funcionamento da sua ideia, podendo ser através de um desenho, programação ou texto.

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 03</title>
+
+    <script>
+        
+        // Contadores
+        var cand1 = 0, cand2 = 0, cand3 = 0
+
+        // Menu
+        var menu = "1) Candidato 01\n"
+            menu+= "2) Candidato 02\n"
+            menu+= "3) Candidato 03\n"
+            menu+= "4) Finalizar votação"
+
+        // voto
+        var voto        
+
+        // Laço
+        do{
+            voto = parseInt(prompt(menu))
+
+            switch(voto){
+                case 1:
+                cand1++
+                break
+                
+                case 2:
+                cand2++
+                break
+                
+                case 3:
+                cand3++
+                break
+            }
+        }while(voto != 4)
+
+        // Quantidade de votos
+        document.write("Candidato1: "+cand1)
+        document.write("<br>")
+        document.write("Candidato2: "+cand2)
+        document.write("<br>")
+        document.write("Candidato3: "+cand3)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
