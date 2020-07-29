@@ -1,0 +1,9 @@
+1) Tenha realizado alguma alteração, criação ou exclusão de arquivos.
+
+2) Utilize os seguintes comandos:
+
+    a) git add .
+    b) git commit -m "Informe as alterações realizadas"
+    c) git push origin master
+
+3) Feito, basta olhar seu diretório no Github. 
