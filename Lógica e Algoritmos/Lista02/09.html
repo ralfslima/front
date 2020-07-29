@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 09</title>
+
+    <script>
+        
+        // Valor a ser investido
+        var valor = parseInt(prompt("Informe o valor a ser investido"))
+
+        // Meses
+        var meses = parseInt(prompt("Informe quantos meses deseja aplicar"))
+
+        // Taxa de juros mensal
+        var taxa = parseFloat(prompt("Informe a taxa mensal"))
+
+        // Índice
+        var indice = 1
+        
+        // Laço
+        while(indice <= meses){
+
+            // Cálculo
+            valor += valor * 0.02
+
+            // Exibir rendimento a cada mês
+            document.write(indice+"º mês o valor será de R$"+valor.toFixed(2)+"<br>")
+
+            // Incremento
+            indice++
+        }
+
+        // Exibir pares e ímpares
+        document.write("<hr>")
+        document.write("Pares: "+par)
+        document.write("<br>")
+        document.write("Ímpares: "+impar)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

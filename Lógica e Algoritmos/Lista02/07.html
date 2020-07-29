@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 07</title>
+
+    <script>
+        
+        // Menu
+        var menu = "*MENU*\n"
+            menu+= "1) Gerente\n"
+            menu+= "2) Atendente\n"
+            menu+= "3) Desenvolvedor\n"
+            menu+= "4) Analista\n"
+            menu+= "5) Designer\n"
+            menu+= "6) Finalizar"
+
+        // Contadores
+        var gerente = 0
+        var atendente = 0
+        var desenvolvedor = 0
+        var analista = 0
+        var designer = 0
+
+        // Código
+        var codigo
+
+        // Laço
+        do{
+            // Obter o código do cargo
+            codigo = parseInt(prompt(menu))
+
+            // Escolha
+            switch (codigo) {
+                case 1:
+                gerente++  
+                break
+
+                case 2:
+                atendente++
+                break
+
+                case 3:
+                desenvolvedor++   
+                break
+
+                case 4:
+                analista++   
+                break
+
+                case 5:
+                designer++    
+                break
+            }
+
+        }while(codigo != 6)
+
+        // Exibir o total de cada cargo
+        document.write("Gerente: "+gerente+"<br>")
+        document.write("Atendente: "+atendente+"<br>")
+        document.write("Desenvolvedor: "+desenvolvedor+"<br>")
+        document.write("Analista: "+analista+"<br>")
+        document.write("Designer: "+designer)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

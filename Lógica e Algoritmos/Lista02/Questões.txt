@@ -9,8 +9,23 @@
 5) Peça dois número, exiba os valores entre esses números.
 
 6) Haverá uma lista de produtos, crie um algoritmo simulando um sistema de caixa para mercado. Haverá os produtos e uma opção para finalizar. Em seguida exiba o total da compra.
-1) Arroz - R$5,00
-2) Feijão - R$8,00
-3) Macarrão - R$3,50
-4) Trigo - R$6,20
-5) Açúcar - R$4,80
+    1) Arroz - R$5,00
+    2) Feijão - R$8,00
+    3) Macarrão - R$3,50
+    4) Trigo - R$6,20
+    5) Açúcar - R$4,80
+
+7) Em uma empresa está sendo realizada uma votação para verificar a quantidade de cargos ocupados. Crie um sistema para contabilizar os votos, ao término do laço, exiba a quantidade.
+    > Atendente
+    > Gerente
+    > Desenvolvedor
+    > Analista
+    > Designer
+
+8) Elaborar um sistema onde o usuário informa dois números. Retorne todos valores entre os dois números informados e a quantidade de pares e ímpares, exemplo: 5 e 12, deverá retornar: 5 6 7 8 9 10 11 12 e exibir a quantidade de pares e ímpares.
+
+9) O usuário informa o valor que deseja aplicar em uma poupança, em seguida informa o tempo (em meses) e a taxa de juros que irá ganhar mensalmente sobre o valor aplicado.
+Exemplo: R$1.000,00 por três meses com juros a 2% ao mês
+1º mês: R$1.020,00
+2º mês: R$1.060,40
+3º mês: R$1.081,20
