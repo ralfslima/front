@@ -1,0 +1,16 @@
+1) Criar um sistema para realizar a tabuada. O usuário informa um número, em seguida é realizada a tabuada daquele número.
+
+2) Faça um algoritmo, onde o usuário informa diversos números. O laço pára de executar apenas quando digitar o número zero, em seguida exiba a soma dos valores informados.
+
+3) Criar um sistema de votação, haverá três candidatos. Crie um laço, onde o usuário terá as três opções de candidatos e uma para finalizar a votação. Ao término exiba a quantidade de votos que cada candidato obteve.
+
+4) O usuário informa um número, exiba os dez antecessores e os dez sucessores.
+
+5) Peça dois número, exiba os valores entre esses números.
+
+6) Haverá uma lista de produtos, crie um algoritmo simulando um sistema de caixa para mercado. Haverá os produtos e uma opção para finalizar. Em seguida exiba o total da compra.
+1) Arroz - R$5,00
+2) Feijão - R$8,00
+3) Macarrão - R$3,50
+4) Trigo - R$6,20
+5) Açúcar - R$4,80
