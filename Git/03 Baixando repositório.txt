@@ -1,0 +1,9 @@
+1) Crie uma pasta
+
+2) Utilize os comandos:
+
+     a) git init
+     b) git remote add origin https://github.com/user/repo.git 
+     c) git pull origin master
+
+3) Os arquivos terão sido importados e o vínculo com o repositório feito.
