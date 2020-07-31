@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nomes</title>
+
+    <script>
+
+        // Vetor
+        var nomes = []
+
+        // Nome
+        var nome
+
+        // Laço
+        do {
+            // Pedir nome
+            nome = prompt("Informe um nome")
+
+            // Armazenar nome
+            if(nome != "sair"){
+                nomes.push(nome)   
+            }
+
+        } while (nome != "sair");
+
+        // Exibir nomes informados
+        for(var indice=0; indice<nomes.length; indice++){
+            document.write((indice+1)+"º nome informado: "+nomes[indice]+"<hr>")
+        }
+
+        // Caso não seja informado nenhum nome
+        if(nomes.length == 0){
+            document.write("Não foi informado nenhum nome.")
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

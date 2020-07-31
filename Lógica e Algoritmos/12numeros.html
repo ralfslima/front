@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números</title>
+
+    <script>
+
+        // Array
+        var numeros = []
+
+        // Armazenar cinco números
+        for(var indice=0; indice<5; indice++){
+            numeros[indice] = prompt("Informe o "+(indice+1)+"º número")
+        }
+
+        // Verificar par e ímpar
+        for(var indice=0; indice<5; indice++){
+            if(numeros[indice] % 2 == 0){
+                document.write(numeros[indice]+" é par<br>")
+            }else{
+                document.write(numeros[indice]+" é ímpar<br>")
+            }
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

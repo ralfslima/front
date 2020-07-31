@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cidades</title>
+
+    <script>
+
+        // Vetor de cidades
+        var cidades = ["Blumenau", "Indaial", "Pomerode"]
+
+        // Variável nome da cidade
+        var pesquisa = prompt("Informe o nome de uma cidade")
+
+        // Verificar se conseguiu encontrar a cidade
+        var encontrado = false
+
+        // Validação
+        for(var indice = 0; indice < cidades.length; indice++){
+            if(pesquisa == cidades[indice]){
+                alert("A cidade pesquisada existe no vetor")
+                encontrado = true
+            }
+        }
+
+        // Condicional
+        if(encontrado == false){
+            alert("A cidade pesquisada não foi encontrada")
+        }
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

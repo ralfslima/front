@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 05</title>
+
+    <script>
+
+      // Vetor
+      var numeros = []
+
+      // Laço
+      for(var indice = 0; indice < 5; indice++){
+        numeros[indice] = prompt("Informe o "+(indice+1)+"º número")
+      }
+
+      // Verifica se existe o número 10
+      var existe = false
+
+      // Exibir todos os números iguais a 10
+      for(var indice = 0; indice < numeros.length; indice++){
+        if(numeros[indice] == 10){
+          document.write("O número dez está na "+(indice+1)+"ª posição<br>")
+          existe = true
+        }
+      }
+
+      // Caso não seja encontrado o número 10
+      if(existe == false){
+        document.write("O número dez não foi informado")
+      }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
