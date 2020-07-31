@@ -1,0 +1,9 @@
+1) Pedir 5 números, em seguida exiba em ordem inversa.
+
+2) O usuário informa 5 números, faça a média desses cinco valores e exiba quais números são maiores ou iguais a média
+
+3) Peça vários números, até que o usuário informe o número zero. Informe a quantidade de pares, ímpares, positivos e negativos. Exiba todos os valores informados.
+
+4) O usuário informa cinco números, porém não poderá haver repetição.
+
+5) Serão pedidos cinco números, informe a posição dos números 10, caso não tenha sido informado nenhum número dez, exiba a frase "O número dez não foi informado".
