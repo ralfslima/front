@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 04</title>
+
+    <script>
+        // Vetor de nomes
+        var nomes = []
+
+        // Cadastro
+        function cadastrar(){
+            // Obter o campo de texto
+            var nome = document.getElementById("nome")
+
+            // Cadastrar no vetor
+            nomes.push(nome.value)
+
+            // Limpar o campo de texto
+            nome.value = ""
+
+            // Deixar o cursor no campo de texto
+            nome.focus()
+
+            // Atualizar listagem de cursos
+            listar()
+        }
+
+        // Listar todos os cursos cadastrados
+        function listar(){
+
+            // Obter o elemento listar
+            var listar = document.getElementById("listar")
+
+            // Limpar o elemento listar
+            listar.innerHTML = ""
+
+            // Listar os cursos
+            for(var indice=0; indice<nomes.length; indice++){
+                listar.innerHTML += nomes[indice]+"<br>"
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+
+    <input type="text" placeholder="Informe seu nome" id="nome">
+    <button onclick="cadastrar()">Cadastrar</button>
+
+    <p id="listar"></p>
+    
+</body>
+</html>

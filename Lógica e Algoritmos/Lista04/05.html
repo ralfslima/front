@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 05</title>
+
+    <script>
+
+        // Função
+        function calcular(){
+
+            // Obter dados
+            var valor = parseInt(document.getElementById("valor").value)
+            var operacao = parseInt(document.getElementById("operacao").value)
+
+            // Escolhar a operação
+            switch(operacao){
+                case 1:
+                    alert("U$ "+(valor / 5.3))
+                break
+
+                case 2:
+                    alert("R$ "+(valor * 5.3))
+                break
+
+                case 3:
+                    alert("€ "+(valor / 6.25))
+                break
+
+                case 4:
+                    alert("R$ "+(valor * 6.25))
+                break
+                
+                default:
+                    alert("Operação inválida")
+
+            }
+
+        }
+
+
+    </script>
+</head>
+<body>
+    
+    <input type="text" placeholder="Informe um valor" id="valor">
+    
+    <select id="operacao">
+        <option>Escolha a operação</option>
+        <option value="1">Real para Dólar</option>
+        <option value="2">Dólar para Real</option>
+        <option value="3">Real para Euro</option>
+        <option value="4">Euro para Real</option>
+    </select>
+
+    <button onclick="calcular()">Calcular</button>
+
+</body>
+</html>

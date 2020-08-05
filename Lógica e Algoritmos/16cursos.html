@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos</title>
+
+    <script>
+        // Vetor de cursos
+        var cursos = []
+
+        // Cadastro
+        function cadastrar(){
+            // Obter o campo de texto
+            var campo_curso = document.getElementById("curso")
+
+            // Cadastrar no vetor
+            cursos.push(campo_curso.value)
+
+            // Limpar o campo de texto
+            campo_curso.value = ""
+
+            // Deixar o cursor no campo de texto
+            campo_curso.focus()
+
+            // Atualizar listagem de cursos
+            listar()
+        }
+
+        // Listar todos os cursos cadastrados
+        function listar(){
+
+            // Obter o elemento listar
+            var elemento_listar = document.getElementById("listar")
+
+            // Limpar o elemento listar
+            elemento_listar.innerHTML = ""
+
+            // Listar os cursos
+            for(var indice=0; indice<cursos.length; indice++){
+                elemento_listar.innerHTML += cursos[indice]+"<br>"
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+
+    <input type="text" placeholder="Curso" id="curso">
+    <button onclick="cadastrar()">Cadastrar</button>
+
+    <p id="listar"></p>
+    
+</body>
+</html>

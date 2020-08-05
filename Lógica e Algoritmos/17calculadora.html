@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+    <script>
+
+        // Função
+        function calcular(){
+
+            // Obter dados
+            var numero1 = parseInt(document.getElementById("numero1").value)
+            var numero2 = parseInt(document.getElementById("numero2").value)
+            var operacao = parseInt(document.getElementById("operacao").value)
+
+            // Escolhar a operação
+            switch(operacao){
+                case 1:
+                    alert("A soma é "+(numero1+numero2))
+                break
+
+                case 2:
+                    alert("A subtração é "+(numero1-numero2))
+                break
+
+                case 3:
+                    alert("A multiplicação é "+(numero1*numero2))
+                break
+
+                case 4:
+                    alert("A divisão é "+(numero1/numero2))
+                break
+                
+                default:
+                    alert("Operação inválida")
+
+            }
+
+        }
+
+
+    </script>
+</head>
+<body>
+    
+    <input type="text" placeholder="Informe um número" id="numero1">
+    <input type="text" placeholder="Informe outro número" id="numero2">
+    
+    <select id="operacao">
+        <option>Escolha a operação</option>
+        <option value="1">Somar</option>
+        <option value="2">Subtrair</option>
+        <option value="3">Multiplicar</option>
+        <option value="4">Dividir</option>
+    </select>
+
+    <button onclick="calcular()">Calcular</button>
+
+</body>
+</html>

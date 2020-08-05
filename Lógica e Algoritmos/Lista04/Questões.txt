@@ -1,0 +1,15 @@
+1) Desenvolver um sistema, onde o usuário irá pedir duas notas, em seguida exiba a média e a situação. A situação será aprovada se a média for 7 ou mais, caso contrário será reprovada.
+
+2) Informe três valores, exiba qual deles é o menor.
+
+3) Criar um sistema, onde o usuário informa um valor. Retorne se o valor é par ou ímpar.
+
+4) Criar um sistema para efetuar cadastros de nomes. Haverá um formulário para ser efetuado o cadastro e um local para exibir os nomes cadastrados.
+
+5) Implemente um sistema para converter valores monetários. O usuário poderá converter os seguintes tipos de moedas:
+Real para Dólar
+Dólar para Real
+Real para Euro
+Euro para Real
+
+6) O usuário informa um valor, exiba a tabuada daquele número.
