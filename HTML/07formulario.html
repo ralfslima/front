@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+
+    <form action="http://www.apexensino.com.br">
+        <input type="text" placeholder="Nome" pattern="[A-Za-z]{3,}" required>
+        <input type="email" placeholder="E-mail" required>
+        <input type="date">
+        
+        <fieldset>
+            <legend>Escolha um turno</legend>
+
+            <input type="radio" name="turno">
+            <label>Matutino</label>
+            <input type="radio" name="turno">
+            <label>Vespertino</label>
+            <input type="radio" name="turno">
+            <label>Noturno</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Cursos</legend>
+
+            <input type="checkbox">
+            <label>Front-end</label>
+
+            <input type="checkbox">
+            <label>Java</label>
+
+            <input type="checkbox">
+            <label>C#</label>
+        </fieldset>
+
+        <textarea placeholder="Mensagem"></textarea>
+
+        <input type="submit" value="Enviar dados">
+    </form>
+    
+</body>
+</html>
