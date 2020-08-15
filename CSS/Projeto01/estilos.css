@@ -1,0 +1,108 @@
+/*Fontes*/
+@font-face{
+    font-family: roboto;
+    src: url(fontes/Roboto-Regular.ttf);
+}
+
+/*Padronizar as tags*/
+*{
+    margin: 0px;
+    padding: 0px;
+    font: 14px roboto;
+}
+
+/*Topo*/
+header{
+    background-color: rgb(228, 228, 228);
+    overflow: auto;
+}
+
+header img{
+    float: left;
+    margin: 15px;
+}
+
+header nav{
+    float: right;
+}
+
+header a{
+    display: inline-block;
+    padding-right: 15px;
+    padding-top: 25px;
+    text-decoration: none;
+    color: #000;
+}
+
+header a:hover{
+    text-decoration: underline;
+}
+
+/*Conteúdo principal*/
+main{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/*Página início*/
+.inicio ul{
+    list-style: none;
+}
+
+.inicio li{
+    display: inline-block;
+    margin: 17px;
+    padding-bottom: 10px;
+}
+
+.inicio h1{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.inicio li:hover{
+    box-shadow: 0px 0px 20px #000;
+}
+
+/*
+    Box-shadow - Parâmetros
+    1º -> borda horizontal (esquerda / direita)
+    2º -> Borda vertical (topo / inferior)
+    3º -> Esfumaçar
+    4º -> Cor
+*/
+
+/*Rodapé*/
+footer{
+    background-color: #000;
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+    margin-top: 50px;
+}
+
+/*Página sobre*/
+.sobre{
+    overflow: auto;
+}
+
+.sobre img{
+    float: left;
+}
+
+.sobre div{
+    float: right;
+    width: 600px;
+}
+
+.sobre p{
+    margin-top: 15px;
+    text-align: justify;
+    text-indent: 15px;
+    line-height: 20px;
+}
+
+.contato div{
+    display: inline-block;
+}
