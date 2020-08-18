@@ -1,0 +1,37 @@
+*{
+    font: 14px sans-serif;
+    outline: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-image: url(fundo.png);
+}
+
+div{
+    background-color: #fff;
+    box-shadow: 0px 0px 10px #ccc;
+    border: 1px solid #c9c9c9;
+    width: 300px;
+    margin: 50px auto;
+}
+
+img{
+    display: block;
+    margin-left: 86px;
+}
+
+button{
+    margin: 10px;
+    width: 128px;
+    display: inline-block;
+    padding: 20px 0px;
+}
+
+h1{
+    background-color: #fff;
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+}

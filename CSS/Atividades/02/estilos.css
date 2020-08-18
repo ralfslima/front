@@ -1,0 +1,38 @@
+*{
+    outline: none;
+    font: 14px sans-serif;
+}
+
+form{
+    width: 300px;
+    padding: 30px;
+    background-color: #ffb039;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+select{
+    width: 290px;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #a36507;
+    border-radius: 10px;
+}
+
+fieldset{
+    margin-top: 20px;
+    border: 1px solid #a36507;
+    border-radius: 10px;
+}
+
+input[type="button"]{
+    background-color: #a36507;
+    margin-top: 20px;
+    padding: 10px 30px;
+    border: 1px solid #7c4d06;
+    border-radius: 10px;
+    color: #fff;
+}

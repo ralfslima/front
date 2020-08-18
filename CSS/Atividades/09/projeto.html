@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex 09</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    
+    <form>
+        <img src="icone.png">
+
+        <input type="text" placeholder="Nome" id="nome">
+        <input type="text" placeholder="Peso" id="peso">
+        <input type="text" placeholder="Altura" id="altura">
+        <input type="button" value="Cadastrar" onclick="acao()">
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Peso</th>
+                <th>Altura</th>
+                <th>Imc</th>
+                <th>Situação</th>
+            </tr>
+        </thead>
+
+        <tbody id="tabela"></tbody>
+    </table>
+</body>
+</html>

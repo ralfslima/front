@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex 07</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    
+    <form>
+        <img src="icone.png">
+
+        <input type="text" placeholder="Produto" id="produto">
+        <select id="marca">
+            <option>Marca</option>
+            <option>LG</option>
+            <option>Samsung</option>
+            <option>Sony</option>
+        </select>
+        <input type="number" placeholder="Valor" id="valor">
+        <input type="button" value="Cadastrar" onclick="acao()">
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>Marca</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+
+        <tbody id="tabela"></tbody>
+    </table>
+</body>
+</html>

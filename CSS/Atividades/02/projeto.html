@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex 02</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    
+    <form>
+        <img src="icone.png">
+
+        <select id="produto">
+            <option>Produto</option>
+            <option>Teclado</option>
+            <option>Mouse</option>
+            <option>Monitor</option>
+            <option>Impressora</option>
+            <option>Fone de ouvido</option>
+        </select>
+
+        <fieldset>
+            <legend>Forma de pagamento</legend>
+            
+            <label>
+                <input type="radio" name="pagamento" id="vista">
+                A vista
+            </label>
+
+            <label>
+                <input type="radio" name="pagamento">
+                A prazo
+            </label>
+        </fieldset>
+
+        <input type="button" value="Efetuar compra" onclick="acao()">
+    </form>
+
+</body>
+</html>

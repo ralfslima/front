@@ -1,0 +1,35 @@
+form{
+    background-color: #df4c12;
+    border-radius: 8px;
+    width: 40%;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    margin: 0 auto;
+    margin-top: 10%;
+    transform: rotate(-10deg);
+}
+
+img{
+    margin-bottom: 30px;
+    transform: rotate(20deg);
+}
+
+input[type="number"]{
+    width: 86%;
+    padding: 2%;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 15px;
+    transform: rotate(10deg);
+}
+
+
+input[type="button"]{
+    background-color: #883301;
+    border-radius: 8px;
+    border: none;
+    padding: 2% 5%;
+    color: #fff;
+    transform: rotate(10deg);
+}

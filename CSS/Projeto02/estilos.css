@@ -1,0 +1,87 @@
+/* Padronizar as tags */
+*{
+    font: 14px sans-serif;
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+}
+
+/* Customizar o body */
+body{
+    background-image: url(moroccan-flower.png);
+}
+
+form{
+    background-color: #fff;
+    width: 800px;
+    margin: 50px auto;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #eee;
+}
+
+img{
+    width: 150px;
+    margin-bottom: 40px;
+    margin-left: 335px;
+}
+
+input[type="text"],
+input[type="number"]{
+    width: 550px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #eee;
+    margin-bottom: 10px;
+    margin-left: 100px;
+}
+
+fieldset{
+    width: 550px;
+    padding: 6px 10px;
+    border-radius: 5px;
+    border: 1px solid #eee;
+    margin-left: 100px;
+    margin-bottom: 10px;
+}
+
+select{
+    width: 572px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #eee;
+    margin-left: 100px;
+    margin-bottom: 10px;
+}
+
+textarea{
+    width: 550px;
+    height: 150px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #eee;
+    margin-left: 100px;
+    resize: none;
+}
+
+input[type="button"]{
+    margin-left: 240px;
+}
+
+input[type="button"],
+input[type="reset"]{
+    background: linear-gradient(to bottom, #9dd53a 0%,#a1d54f 50%,#80c217 51%,#7cbc0a 100%);
+    border: 1px solid #67AA0A;
+    border-radius: 5px;
+    padding: 10px;
+    color: #fff;
+    width: 130px;
+    margin-top: 20px;
+    transition: box-shadow 0.5s; 
+}
+
+input[type="button"]:hover,
+input[type="reset"]:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 5px #777; 
+}
