@@ -1,0 +1,184 @@
+/* Padrão */
+*{
+    margin: 0px;
+    padding: 0px;
+    font: 14px sans-serif;
+    outline: none;
+}
+
+/* Topo */
+header{
+    overflow: hidden;
+    box-shadow: 0px 1px 5px #b3b3b3;
+}
+
+#logo{
+    float: left; 
+    width: 15%;
+    padding-top: 30px;
+}
+
+#logo img{
+    margin-left: 15px;
+}
+
+#pesquisa{
+    float: left;
+    width: 70%;
+    padding-top: 25px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+#pesquisa input[type="search"]{
+    border: 1px solid rgb(87, 1, 11);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    padding: 15px;
+    border-right-width: 0px;
+    width: 700px;
+}
+
+#pesquisa input[type="button"]{
+    border: 1px solid rgb(87, 1, 11);
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 15px;
+    background-color: rgb(173, 15, 33);
+    color: #fff;
+}
+
+#cesta{
+    float: left;
+    width: 15%;
+    padding-top: 20px;
+    text-align: right;
+}
+
+#cesta img{
+    margin-right: 15px;
+    width: 56px;
+}
+
+/* Conteúdos */
+main{
+    width: 1200px;
+    margin: 30px auto;
+}
+
+/* Categorias */
+#categorias{
+    overflow: hidden;
+}
+
+#categoriaPrincipal{
+    background-image: url(imagens/categorias/1.jpg);
+    background-size: cover;
+    width: 600px;
+    height: 400px;
+    float: left;
+}
+
+#categoriaPrincipal h1{
+    font-size: 36px;
+    margin-top: 130px;
+    margin-left: 40px;
+    border-bottom: 3px solid rgb(173, 15, 33);
+    width: 290px;
+}
+
+#categoriaSecundaria{
+    float: left;
+    width: 600px;
+}
+
+#categoriaSecundaria h1{
+    font-size: 20px;
+    margin-top: 50px;
+    margin-left: 5px;
+    border-bottom: 3px solid rgb(173, 15, 33);
+    width: 150px;
+}
+
+#categoria_masculino{
+    background-image: url(imagens/categorias/2.jpg);
+    background-size: cover;
+    width: 300px;
+    height: 200px;
+    float: left;
+}
+
+#categoria_infantil{
+    background-image: url(imagens/categorias/3.jpg);
+    background-size: cover;
+    width: 300px;
+    height: 200px;
+    float: left;
+}
+#categoria_cosmeticos{
+    background-image: url(imagens/categorias/4.jpg);
+    background-size: cover;
+    width: 300px;
+    height: 200px;
+    float: left;
+}
+
+#categoria_acessorios{
+    background-image: url(imagens/categorias/5.jpg);
+    background-size: cover;
+    width: 300px;
+    height: 200px;
+    float: left;
+}
+
+/* Produtos */
+#produtos{
+    margin-top: 40px;
+}
+
+#produtos h1{
+    font-size: 36px;
+    border-bottom: 3px solid rgb(173, 15, 33);
+    width: 420px;
+}
+
+#produtos ul{
+    list-style: none;
+    margin-top: 40px;
+}
+
+#produtos li{
+    display: inline-block;
+    transition: box-shadow 0.3s, transform 0.3s;
+    overflow: hidden;
+    width: 272px;
+    border: 1px solid #ccc;
+    margin: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#produtos li:hover{
+    box-shadow: 1px 1px 5px rgb(173, 15, 33);
+    transform: scale(1.02, 1.02);
+}
+
+#produtos img{
+    width: 100%;
+    border-bottom: 5px solid rgb(173, 15, 33);
+}
+
+#produtos #titulo{
+    padding: 15px;
+    float: left;
+    width: 100px;
+    text-align: center;
+}
+
+#produtos #preco{
+    padding: 15px;
+    font-weight: bold;
+    float: right;
+    width: 100px;
+    text-align: center;
+}
