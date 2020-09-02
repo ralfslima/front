@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+
+    <!-- CSS -->
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            font: 14px sans-serif;
+        }
+
+        header{
+            background-color: #000;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        h1{
+            color: #fff;
+            padding: 15px;
+            font-size: 32px;
+        }
+
+        a{
+            color: #fff;
+            text-decoration: none;
+            padding: 25px;
+            display: inline-block;
+        }
+
+        a:hover{
+            background-color: #fff;
+            color: #000;
+        }
+
+        select{
+            display: none;
+        }
+
+        @media screen and (max-width:600px){
+            header{
+                display: none;
+            }
+
+            select{
+                display: block;
+                width: 80%;
+                margin: 5% auto;
+                padding: 15px;
+                border: solid 1px #ccc;
+                border-radius: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <select>
+        <option value="">Início</option>
+        <option value="">Sobre</option>
+        <option value="">Contato</option>
+    </select>
+    
+    <header>
+        <h1>Logo</h1>
+
+        <nav>
+            <a href="#">Início</a>
+            <a href="#">Sobre</a>
+            <a href="#">Contato</a>
+        </nav>
+    </header>
+
+</body>
+</html>

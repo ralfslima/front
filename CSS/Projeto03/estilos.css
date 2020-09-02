@@ -182,3 +182,34 @@ main{
     width: 100px;
     text-align: center;
 }
+
+#instagram{
+    overflow: hidden;
+}
+
+#img1{
+    background-image: url(imagens/instagram/insta-1.jpg);
+    width: 320px;
+    height: 320px;
+    transition: opacity 0.3s;
+}
+
+#img1:hover{
+    opacity: 0.7;
+}
+
+#img1:hover::after{
+    content: url(imagens/instagram.png);
+    margin-top: 80px;
+    margin-left: 100px;
+    position: absolute;
+}
+
+#img1:hover::before{
+    content: "Veja mais";
+    margin-top: 210px;
+    margin-left: 100px;
+    position: absolute;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+}

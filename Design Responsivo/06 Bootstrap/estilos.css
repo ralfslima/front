@@ -1,0 +1,67 @@
+.imgBanner{
+    height: 800px;
+}
+
+@media screen and (max-width:575px){
+    .imgBanner{
+        height: 300px;
+    }
+}
+
+
+@media screen and (min-width:576px) and (max-width:991px){
+    .imgBanner{
+        height: 500px;
+    }
+}
+
+
+
+.cursos{
+    margin-top: 30px;
+}
+
+.cursos h1{
+    margin-bottom: 40px;
+    font-size: 28px;
+}
+
+.cursos .card{
+    margin-bottom: 25px;
+}
+
+.cursos h2{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.cursos p{
+    text-align: justify;
+    padding: 5px;
+}
+
+@media screen and (min-width: 576px){
+    .cursos img{
+        height: 170px;
+    }
+}
+
+.jumbotron{
+    margin-top: 30px;
+}
+
+.contato iframe{
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+.contato input,
+.contato select,
+.contato textarea{
+    margin-bottom: 10px;
+}
+
+.contato textarea{
+    height: 110px;
+}

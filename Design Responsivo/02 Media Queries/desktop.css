@@ -1,0 +1,33 @@
+h1::after{
+    content: "Desktop";
+}
+
+*{
+    margin: 0px;
+    padding: 0xp;
+}
+
+[class*="col-desktop-"]{
+    float: left;
+}
+
+.col-desktop-1{width:8.33%}
+.col-desktop-2{width:16.66%}
+.col-desktop-3{width:25%}
+.col-desktop-4{width:33.33%}
+.col-desktop-5{width:41.66%}
+.col-desktop-6{width:50%}
+.col-desktop-7{width:58.33%}
+.col-desktop-8{width:66.66%}
+.col-desktop-9{width:75%}
+.col-desktop-10{width:83.33%}
+.col-desktop-11{width:91.66%}
+.col-desktop-12{width:100%}
+
+.corAzul{
+    background-color: blue;
+}
+
+.corVermelha{
+    background-color:red;
+}

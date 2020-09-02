@@ -1,0 +1,37 @@
+h1::after{
+    content: "Mobile";
+}
+
+
+*{
+    margin: 0px;
+    padding: 0xp;
+}
+
+[class*="col-desktop-"]{
+    float: left;
+}
+
+.col-mobile-1{width:8.33%}
+.col-mobile-2{width:16.66%}
+.col-mobile-3{width:25%}
+.col-mobile-4{width:33.33%}
+.col-mobile-5{width:41.66%}
+.col-mobile-6{width:50%}
+.col-mobile-7{width:58.33%}
+.col-mobile-8{width:66.66%}
+.col-mobile-9{width:75%}
+.col-mobile-10{width:83.33%}
+.col-mobile-11{width:91.66%}
+.col-mobile-12{width:100%}
+
+.corAzul{
+    background-color: blue;
+}
+
+.corVermelha{
+    background-color:red;
+}
+
+
+
