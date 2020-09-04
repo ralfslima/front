@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionais</title>
+
+    <script>
+        // Função
+        function acao(){
+           
+            // Obter o elemento input - text
+            let campo = document.getElementById("idade")
+
+            // Obter o elemento H1
+            let mensagem = document.getElementById("mensagem")
+
+            // Verificar se é um número
+            if(campo.value == ""){
+                mensagem.innerHTML = "Favor informar algo"
+                mensagem.style = "color:red"
+            }else if(isNaN(campo.value)){
+                mensagem.innerHTML = "Favor informar apenas números"
+                mensagem.style = "color:red"
+            }else{
+                // Verificar se é maior ou menor de idade
+                if(campo.value >= 18){
+                    mensagem.innerHTML = "Maior de idade"
+                    mensagem.style = "color:green"
+                }else{
+                    mensagem.innerHTML = "Menor de idade"
+                    mensagem.style = "color:blue"
+                } 
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="idade">
+    <button onclick="acao()">Verificar</button>
+
+    <h1 id="mensagem"></h1>
+</body>
+</html>

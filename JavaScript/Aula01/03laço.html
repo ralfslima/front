@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laço</title>
+
+    <script>
+
+        // Executa quando carregar todos os elementos da página
+        window.onload = function(){
+            // Obter a lista
+            let lista = document.getElementsByClassName("lista")[0]
+
+            // Índice
+            let indice = 1
+
+            // Laço
+            while(indice < 11){
+                // Criar elemento li
+                let li = document.createElement("li")
+                
+                // Criar um valor
+                let valor = document.createTextNode(indice)
+
+                // Adicionar o valor no li
+                li.appendChild(valor)
+
+                // Adicionar o li na lista
+                lista.appendChild(li);
+
+                // Incrementar índice
+                indice++
+            }
+            
+        }
+
+    </script>
+</head>
+<body>
+    
+    <ul class="lista"></ul>
+    
+</body>
+</html>

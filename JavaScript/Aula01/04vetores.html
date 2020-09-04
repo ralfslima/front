@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vetor</title>
+
+    <script>
+
+        // Ao carregar
+        window.onload = function(){
+
+            // Vetor
+            let dados = [
+                ["Bruno", 22], 
+                ["Carla", 32], 
+                ["Daiana", 40],
+                ["Eduardo", 12]
+            ]
+
+            // Obter a lista
+            let lista = document.getElementById("lista")
+
+            // Laço para exibir cada nome
+            for(let indice=0; indice<dados.length; indice++){
+                lista.innerHTML += dados[indice][0] + " - ";
+                lista.innerHTML += dados[indice][1] + "<hr>";
+            }
+        }
+
+    </script>
+ 
+</head>
+<body>
+    
+    <div id="lista"></div>
+
+</body>
+</html>

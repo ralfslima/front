@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <style>
+        form{
+            width: 50%;
+            margin: 50px auto;
+        }
+
+        input, select{
+            margin-bottom: 10px;
+        }
+    </style>
+
+    <!-- JS -->
+    <script>
+        function valida(){
+            // Variável de retorno
+            var retorno = true
+
+            // Obter os dados
+            let nome = document.getElementById("nome")
+            let email = document.getElementById("email")
+            let turno = document.getElementById("turno")
+
+            // Validar campo nome e e-mail
+            if(nome.value == ""){
+                alert("O campo nome precisa ser preenchido.")
+                retorno = false
+            }else if(nome.value.length < 3){
+                alert("O campo nome precisa ter ao menos três caracteres.")
+                retorno = false
+            }else if(email.value == ""){
+                alert("O campo e-mail precisa ser preenchido.")
+                retorno = false
+            }else if(email.value.length < 5){
+                alert("O campo e-mail precisa ter ao menos cinco caracteres.")
+                retorno = false
+            }else if(email.value.indexOf("@") == -1){
+                alert("Favor informar um e-mail válido.")
+                retorno = false
+            }else if(turno.value == 0){
+                alert("Favor informar o turno.")
+                retorno = false
+            }
+
+            // Retorno
+            return retorno
+        }
+    </script>
+</head>
+<body>
+
+    <form action="http://www.google.com" onsubmit="return valida()">
+        <input type="text" placeholder="Nome" id="nome" class="form-control">
+        
+        <input type="text" placeholder="E-mail" id="email" class="form-control">
+        
+        <select id="turno" class="form-control">
+            <option value="0">Escolha o turno</option>
+            <option value="1">Matutino</option>
+            <option value="2">Vespertino</option>
+            <option value="3">Noturno</option>
+        </select>
+
+        <input type="submit" class="btn btn-primary">
+    </form>
+    
+</body>
+</html>
