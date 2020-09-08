@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex 04</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="estilos.css">
+
+    <!-- Script -->
+    <script>
+
+        // Função
+        function acao(){
+
+            // Captar as notas
+            let nota1 = document.getElementById("nota1");
+            let nota2 = document.getElementById("nota2");
+            let nota3 = document.getElementById("nota3");
+            let nota4 = document.getElementById("nota4");
+            let faltas = document.getElementById("faltas");
+
+            // Validar campos
+            if((nota1.value == "") || (nota2.value == "") || (nota3.value == "") || (nota4.value == "") || (faltas.value == "")){
+                alert("Os campos precisam estar preenchidos");
+            }else{
+                let media = (parseFloat(nota1.value) + parseFloat(nota2.value) + parseFloat(nota3.value) + parseFloat(nota4.value))/4;
+                
+                if(faltas.value >= 15){
+                    alert("Reprovado por faltas");
+                }else if(media >= 7){
+                    alert("Aprovado(a) com média "+media.toFixed(2));
+                }else{
+                    alert("Reprovado(a) com média "+media.toFixed(2));
+                }
+            }
+
+            // Limpar os campos
+            nota1.value = "";
+            nota2.value = "";
+            nota3.value = "";
+            nota4.value = "";
+
+            // Cursor no campo nota1
+            nota1.focus();
+        }
+
+    </script>
+
+</head>
+<body>
+    
+    <form>
+        <img src="icone.png">
+
+        <input type="number" placeholder="Primeira nota" id="nota1">
+        <input type="number" placeholder="Segunda nota" id="nota2">
+        <input type="number" placeholder="Terceira nota" id="nota3">
+        <input type="number" placeholder="Quarta nota" id="nota4">
+        <input type="number" placeholder="Faltas" id="faltas">
+        <input type="submit" value="Calcular" onclick="acao()">
+    </form>
+
+</body>
+</html>

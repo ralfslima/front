@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex 09</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="estilos.css">
+
+    <script>
+        // Vetor
+        let dados = [];
+
+        // Função
+        function acao(){
+
+            // Captar dados
+            let nome = document.getElementById("nome");
+            let peso = document.getElementById("peso");
+            let altura = document.getElementById("altura");
+
+            // IMC
+            let imc = peso.value / (altura.value * altura.value);
+
+            // Situação
+            let situacao = "Abaixo do peso";
+
+            if(imc >= 18.5 && imc <= 24.9){
+                situacao = "Normal";
+            }else if(imc >= 25 && imc <= 29.9){
+                situacao = "Acima do peso";
+            }if(imc >= 30){
+                situacao = "Obesidade";
+            }
+
+            // Tbody
+            let tabela = document.getElementById("tabela");
+
+            
+            // Adicionar ao vetor
+            dados.push([nome.value, peso.value, altura.value, imc, situacao]);
+
+            // Tabela
+            tabela.innerHTML = "";
+
+            for(let i=0; i<dados.length; i++){
+
+                let linha = tabela.insertRow(-1);
+
+                let colunaNome = linha.insertCell(0);
+                let colunaPeso = linha.insertCell(1);
+                let colunaAltura = linha.insertCell(2);
+                let colunaImc = linha.insertCell(3);
+                let colunaSituacao = linha.insertCell(4);
+
+                colunaNome.innerHTML = dados[i][0];
+                colunaPeso.innerHTML = dados[i][1];
+                colunaAltura.innerHTML = dados[i][2];
+                colunaImc.innerHTML = dados[i][3].toFixed(2);
+                colunaSituacao.innerHTML = dados[i][4];
+
+            }
+        
+
+            // Limpar os campos
+            nome.value = "";
+            peso.value = "";
+            altura.value = "";
+
+            // Cursor no campo n1
+            nome.focus();
+        }   
+    </script>
+
+</head>
+<body>
+    
+    <form>
+        <img src="icone.png">
+
+        <input type="text" placeholder="Nome" id="nome">
+        <input type="text" placeholder="Peso" id="peso">
+        <input type="text" placeholder="Altura" id="altura">
+        <input type="button" value="Cadastrar" onclick="acao()">
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Peso</th>
+                <th>Altura</th>
+                <th>Imc</th>
+                <th>Situação</th>
+            </tr>
+        </thead>
+
+        <tbody id="tabela"></tbody>
+    </table>
+</body>
+</html>

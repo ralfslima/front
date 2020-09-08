@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex 03</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="estilos.css">
+
+    <!-- Script -->
+    <script>
+
+        // Ao carregar a página
+        window.onload = function(){
+            document.getElementById("c1").innerHTML = "Candidato 01 não possui votos."
+            document.getElementById("c2").innerHTML = "Candidato 02 não possui votos."
+            document.getElementById("c3").innerHTML = "Candidato 03 não possui votos."
+            document.getElementById("c4").innerHTML = "Candidato 04 não possui votos."
+        }
+
+        // Contadores
+        let cand1 = 0;
+        let cand2 = 0;
+        let cand3 = 0;
+        let cand4 = 0;
+
+        // Função
+        function acao(voto){
+            switch(voto){
+                case 1: 
+                    cand1++; 
+                    document.getElementById("c1").innerHTML = "Candidato 01 obteve: "+cand1+" votos.";
+                break;
+
+                case 2: 
+                    cand2++; 
+                    document.getElementById("c2").innerHTML = "Candidato 02 obteve: "+cand2+" votos.";
+                break;
+
+                case 3: 
+                    cand3++; 
+                    document.getElementById("c3").innerHTML = "Candidato 03 obteve: "+cand3+" votos.";
+                break;
+
+                case 4: 
+                    cand4++; 
+                    document.getElementById("c4").innerHTML = "Candidato 04 obteve: "+cand4+" votos.";
+                break;
+            }
+        }
+
+    </script>
+</head>
+<body>
+    
+    <div>
+        <img src="icone.png">
+
+        <button onclick="acao(1)">Candidado 01</button>
+        <button onclick="acao(2)">Candidado 02</button>
+        <button onclick="acao(3)">Candidado 03</button>
+        <button onclick="acao(4)">Candidado 04</button>
+    </div>
+
+    <h1 id="c1"></h1>
+    <h1 id="c2"></h1>
+    <h1 id="c3"></h1>
+    <h1 id="c4"></h1>
+
+</body>
+</html>

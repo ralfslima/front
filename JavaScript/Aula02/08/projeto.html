@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex 08</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="estilos.css">
+
+    <script>
+        // Contador
+        let contador = 0;
+
+        // Função
+        function acao(posicao, elemento){
+
+            // Descobrir se é X ou O
+            let simbolo = "O";
+            if(contador % 2 == 0){
+                simbolo = "X";
+            }
+
+            // Atribuir símbolo
+            elemento.innerText = simbolo;
+
+            // Desabilitando botão
+            elemento.disabled = true;
+
+            // Verificar se houve ganhador
+            let n1 = document.getElementById("n1").innerHTML;
+            let n2 = document.getElementById("n2").innerHTML;
+            let n3 = document.getElementById("n3").innerHTML;
+            let n4 = document.getElementById("n4").innerHTML;
+            let n5 = document.getElementById("n5").innerHTML;
+            let n6 = document.getElementById("n6").innerHTML;
+            let n7 = document.getElementById("n7").innerHTML;
+            let n8 = document.getElementById("n8").innerHTML;
+            let n9 = document.getElementById("n9").innerHTML;
+
+            if((n1 == "X") && (n2 == "X") && (n3 == "X")){
+                alert("Jogador X ganhou");
+            }else if((n4 == "X") && (n5 == "X") && (n6 == "X")){
+                alert("Jogador X ganhou");
+            }else if((n7 == "X") && (n8 == "X") && (n9 == "X")){
+                alert("Jogador X ganhou");
+            }else if((n1 == "X") && (n4 == "X") && (n7 == "X")){
+                alert("Jogador X ganhou");
+            }else if((n2 == "X") && (n5 == "X") && (n8 == "X")){
+                alert("Jogador X ganhou");
+            }else if((n3 == "X") && (n6 == "X") && (n9 == "X")){
+                alert("Jogador X ganhou");
+            }else if((n1 == "X") && (n5 == "X") && (n9 == "X")){
+                alert("Jogador X ganhou");
+            }else if((n3 == "X") && (n5 == "X") && (n7 == "X")){
+                alert("Jogador X ganhou");
+            }else if((n1 == "O") && (n2 == "O") && (n3 == "O")){
+                alert("Jogador O ganhou");
+            }else if((n4 == "O") && (n5 == "O") && (n6 == "O")){
+                alert("Jogador O ganhou");
+            }else if((n7 == "O") && (n8 == "O") && (n9 == "O")){
+                alert("Jogador O ganhou");
+            }else if((n1 == "O") && (n4 == "O") && (n7 == "O")){
+                alert("Jogador O ganhou");
+            }else if((n2 == "O") && (n5 == "O") && (n8 == "O")){
+                alert("Jogador O ganhou");
+            }else if((n3 == "O") && (n6 == "O") && (n9 == "O")){
+                alert("Jogador O ganhou");
+            }else if((n1 == "O") && (n5 == "O") && (n9 == "O")){
+                alert("Jogador O ganhou");
+            }else if((n3 == "O") && (n5 == "O") && (n7 == "O")){
+                alert("Jogador O ganhou");
+            }
+
+            // Incrementar contador
+            contador++;
+        }
+    </script>
+</head>
+<body>
+    
+    <div>
+        <button onclick="acao(1, this)" id="n1">1</button>
+        <button onclick="acao(2, this)" id="n2">2</button>
+        <button onclick="acao(3, this)" id="n3">3</button>
+        <button onclick="acao(4, this)" id="n4">4</button>
+        <button onclick="acao(5, this)" id="n5">5</button>
+        <button onclick="acao(6, this)" id="n6">6</button>
+        <button onclick="acao(7, this)" id="n7">7</button>
+        <button onclick="acao(8, this)" id="n8">8</button>
+        <button onclick="acao(9, this)" id="n9">9</button>
+    </div>
+
+</body>
+</html>

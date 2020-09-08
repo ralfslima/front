@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex 07</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="estilos.css">
+
+    <script>
+        // Vetor
+        let produtos = [];
+
+        // Função
+        function acao(){
+
+            // Captar dados
+            let produto = document.getElementById("produto");
+            let marca = document.getElementById("marca");
+            let valor = document.getElementById("valor");
+
+            // Tbody
+            let tabela = document.getElementById("tabela");
+
+            // Validar campos
+            if((produto.value == "") || (marca.value == "Marca") || (valor.value == "")){
+                alert("Os campos precisam estar preenchidos");
+            }else{
+                produtos.push([produto.value, marca.value, valor.value]);
+
+                tabela.innerHTML = "";
+
+                for(let i=0; i<produtos.length; i++){
+
+                    let linha = tabela.insertRow(-1);
+
+                    let colunaProduto = linha.insertCell(0);
+                    let colunaMarca = linha.insertCell(1);
+                    let colunaValor = linha.insertCell(2);
+
+                    colunaProduto.innerHTML = produtos[i][0];
+                    colunaMarca.innerHTML = produtos[i][1];
+                    colunaValor.innerHTML = produtos[i][2];
+
+                }
+            }
+
+            // Limpar os campos
+            produto.value = "";
+            marca.value = "Marca";
+            valor.value = "";
+
+            // Cursor no campo n1
+            nproduto.focus();
+        }   
+    </script>
+</head>
+<body>
+    
+    <form>
+        <img src="icone.png">
+
+        <input type="text" placeholder="Produto" id="produto">
+        <select id="marca">
+            <option>Marca</option>
+            <option>LG</option>
+            <option>Samsung</option>
+            <option>Sony</option>
+        </select>
+        <input type="number" placeholder="Valor" id="valor">
+        <input type="button" value="Cadastrar" onclick="acao()">
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>Marca</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+
+        <tbody id="tabela"></tbody>
+    </table>
+</body>
+</html>

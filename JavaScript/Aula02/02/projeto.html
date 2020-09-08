@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex 02</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="estilos.css">
+
+    <!-- Script -->
+    <script>
+
+        function acao(){
+
+            // Obter dados
+            let produto = document.getElementById("produto");
+            let vista = document.getElementById("vista");
+
+            // Condicional
+            switch(produto.value){
+                case "Teclado":
+                    if(vista.checked == true){
+                        alert("Teclado comprado a vista, no valor de R$100,00");
+                    }else{
+                        alert("Teclado comprado a prazo, no valor de R$110,00");
+                    }
+                break;
+
+                case "Mouse":
+                    if(vista.checked == true){
+                        alert("Mouse comprado a vista, no valor de R$150,00");
+                    }else{
+                        alert("Mouse comprado a prazo, no valor de R$190,00");
+                    }
+                break;
+
+                case "Monitor":
+                    if(vista.checked == true){
+                        alert("Monitor comprado a vista, no valor de R$1500,00");
+                    }else{
+                        alert("Monitor comprado a prazo, no valor de R$1900,00");
+                    }
+                break;
+                
+                case "Impressora":
+                    if(vista.checked == true){
+                        alert("Impressora comprada a vista, no valor de R$300,00");
+                    }else{
+                        alert("Impressora comprada a prazo, no valor de R$330,00");
+                    }
+                break;
+                
+                case "Fone de ouvido":
+                    if(vista.checked == true){
+                        alert("Fone de ouvido comprado a vista, no valor de R$50,00");
+                    }else{
+                        alert("Fone de ouvido comprado a prazo, no valor de R$59,90");
+                    }
+                break;
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+    
+    <form>
+        <img src="icone.png">
+
+        <select id="produto">
+            <option>Produto</option>
+            <option>Teclado</option>
+            <option>Mouse</option>
+            <option>Monitor</option>
+            <option>Impressora</option>
+            <option>Fone de ouvido</option>
+        </select>
+
+        <fieldset>
+            <legend>Forma de pagamento</legend>
+            
+            <label>
+                <input type="radio" name="pagamento" id="vista">
+                A vista
+            </label>
+
+            <label>
+                <input type="radio" name="pagamento">
+                A prazo
+            </label>
+        </fieldset>
+
+        <input type="button" value="Efetuar compra" onclick="acao()">
+    </form>
+
+</body>
+</html>
