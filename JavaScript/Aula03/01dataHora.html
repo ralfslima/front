@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01 Data e Hora</title>
+
+    <!-- JS -->
+    <script>
+
+        // Objeto
+        let data_hora = new Date()
+
+        // Retornar data
+        let dia = data_hora.getDate()
+        let mes = data_hora.getMonth() + 1
+        let ano = data_hora.getFullYear()
+
+        let hora = data_hora.getHours()
+        let minuto = data_hora.getMinutes()
+        let segundo = data_hora.getSeconds()
+
+        alert(dia+ "/" + mes + "/" + ano)
+        alert(hora + ":" + minuto + ":" + segundo)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
