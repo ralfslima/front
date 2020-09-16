@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 03</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <style>
+        input, textarea, .alert{
+            margin-top: 20px;
+        }
+    </style>
+
+    <!-- JS -->
+    <script>
+        function validar(){
+
+            // Obter a div com o id alerta
+            var alerta = document.getElementById("alerta")
+
+            // Obter campos
+            let nome = document.getElementById("nome")
+            let email = document.getElementById("email")
+            let titulo = document.getElementById("titulo")
+            let mensagem = document.getElementById("mensagem")
+
+            // Lista de caracteres válidos para o e-mail
+            let caracteres = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", ".", "@", "_"]
+
+            // Validar caracteres
+            let validaCaracteresEmail = true;
+
+            for(let i=0; i<email.value.length; i++){
+                // Obter caractere
+                let caractere = email.value.charAt(i)
+
+                // Verificar se a validação abaixo retorna true
+                let validacao = false;
+
+                // Verificar se é válido
+                for(let i2=0; i2<caracteres.length; i2++){
+                    if(caracteres[i2] == caractere){
+                        validacao = true
+                        break
+                    }
+                }
+
+                // Condicional para verificar se continua a validar as letras
+                if(validacao == false){
+                    validaCaracteresEmail = false;
+                    break;
+                }
+            }
+
+            // Verificar a quantidade de arrobas
+            let contArroba = 0
+            for(let i=0; i<email.value.length; i++){
+                // Obter caractere
+                let caractere = email.value.charAt(i)
+
+                // Condicional
+                if(caractere == "@"){
+                    contArroba++
+                }
+            }
+
+            
+
+            // Condicional
+            if(nome.value.length < 3){
+                alerta.innerHTML = ("Informe um nome válido")
+                alerta.classList.add("alert-danger")
+                nome.focus()
+                return false
+            }else if(email.value.indexOf(".") == -1 || contArroba != 1 || validaCaracteresEmail == false){
+                alerta.innerHTML = ("Informe um e-mail válido")
+                alerta.classList.add("alert-danger")
+                email.focus()
+                return false
+            }else if(titulo.value.length < 5){
+                alerta.innerHTML = ("Informe um título válido")
+                alerta.classList.add("alert-danger")
+                titulo.focus()
+                return false
+            }else if(mensagem.value.length < 10){
+                alerta.innerHTML = ("Informe um mensagem válida")
+                alerta.classList.add("alert-danger")
+                mensagem.focus()
+                return false
+            }else{
+                alerta.innerHTML = ("Formulário validado com sucesso!")
+                alerta.classList.add("alert-success")
+                return false
+            }
+
+        }
+    </script>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-6 offset-3">
+                <div class="alert" id="alerta"></div>
+
+                <form onsubmit="return validar()">
+                    <input type="text" placeholder="Nome" id="nome" class="form-control">
+                    <input type="text" placeholder="E-mail" id="email" class="form-control">
+                    <input type="text" placeholder="Título" id="titulo" class="form-control">
+                    <textarea placeholder="Mensagem" id="mensagem" class="form-control"></textarea>
+                    <input type="submit" value="Enviar" class="btn btn-primary">
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

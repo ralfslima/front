@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 01</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <style>
+        input{
+            margin-top: 20px;
+        }
+    </style>
+
+    <!-- JS -->
+    <script>
+        function verificar(){
+
+            // Obter a palavra
+            let palavra = document.getElementById("palavra").value
+
+            // Contadores
+            let consoantes = 0
+            let vogais = 0
+
+            // Laço
+            for(let i=0; i<palavra.length; i++){
+                
+                // Obter a letra em formato minúsculo
+                let letra = palavra.toLowerCase().charAt(i)
+
+                // Condicional
+                if(letra == "a" || letra == "e" || letra == "i" || letra == "o" || letra == "u"){
+                    vogais++
+                }else{
+                    consoantes++
+                }
+                
+            }
+
+            // Exibir contadores
+            document.getElementById("mensagem").innerHTML = "Vogais: " + vogais + "<br>"
+            document.getElementById("mensagem").innerHTML+= "Consoantes: " + consoantes
+
+        }
+    </script>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-6 offset-3">
+                <input type="text" placeholder="Informe uma palavra" id="palavra" class="form-control">
+                <input type="button" value="Verificar" onclick="verificar()" class="btn btn-primary">
+            </div>
+        </div>
+    </div>
+
+    <p id="mensagem"></p>
+    
+</body>
+</html>

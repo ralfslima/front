@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 06</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <!-- CSS -->
+    <style>
+
+        #produtos{
+            margin-top: 70px;
+        }
+        
+        .navbar p{
+            padding: 0px 10px;
+        }
+
+        .card p{
+            font-size: 13px;
+            text-align: center;
+        }
+
+        .card{
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .card:hover{
+            cursor: pointer;
+        }
+    </style>
+
+    <!-- JS -->
+    <script>
+        // JSON de produtos
+        let produtos = [
+            {"nome":"Farinha Láctea Lata 400g",           "valor":11.49, "imagem":"1.jpg"},
+            {"nome":"Leite Condensado Moça Lata 395g",    "valor":6.49,  "imagem":"2.jpg"},
+            {"nome":"Açúcar Refinado União 1Kg",          "valor":2.81,  "imagem":"3.jpg"},
+            {"nome":"Óleo de Soja Liza 900ml",            "valor":6.59,  "imagem":"4.jpg"},
+            {"nome":"Feijão Carioca Broto Legal 1 Kg",    "valor":9.19,  "imagem":"5.jpg"},
+            {"nome":"Lasanha à Bolonhesa Sadia 600g",     "valor":6.49,  "imagem":"6.jpg"},
+            {"nome":"Maionese Hellmann's 500g",           "valor":7.45,  "imagem":"7.jpg"},
+            {"nome":"Bebida Láctea Toddynho 200ml",       "valor":1.99,  "imagem":"8.jpg"},
+            {"nome":"Sorvete de Flocos Kibon 1,5 Litros", "valor":26.00, "imagem":"9.jpg"},
+            {"nome":"Leite Condensado Itambé Lata 395g",  "valor":5.65,  "imagem":"10.jpg"},
+            {"nome":"Creme de Leite Nestlé 200g",         "valor":3.99,  "imagem":"11.jpg"},
+            {"nome":"Azeite Português Andorinha 500ml",   "valor":20.90,  "imagem":"12.jpg"}
+        ]
+
+        // JSON de carrinho
+        let carrinho = []
+
+        // Ao carregar
+        window.onload = () =>{
+
+            // Obter o elemento com id produtos
+            let elemento = document.getElementById("produtos")
+
+            // Laço
+            for(let i=0; i<13; i++){
+
+                let estrutura = "<div class='col-3'>"
+                        estrutura+= "<div class='card' onClick='adicionarCarrinho("+i+")'>"
+                            estrutura+= "<img src='imagens/"+produtos[i].imagem+"' class='img-fluid'>"
+                            estrutura+= "<p>"+produtos[i].nome+"</p>"
+                            estrutura+= "<p>R$ "+JSON.stringify(produtos[i].valor).replace('.',',')+"</p>"
+                        estrutura += "</div>"
+                    estrutura += "</div>"
+
+                elemento.innerHTML += estrutura
+            }
+
+        }
+
+        // Função para adicionar no carrinho
+        let adicionarCarrinho = (indice) => {
+
+            // Nome do produto
+            let nome = produtos[indice].nome
+
+            // Quantidade
+            let quantidade = 0
+            
+            // Verifica se o produto já foi adicionado anteriormente
+            let existe = false
+            for(let i=0; i<carrinho.length; i++){
+                if(indice == carrinho[i].codigo){
+                    quantidade = carrinho[i].quantidade + 1
+                    carrinho[i] = {"codigo": indice, "nome":nome, "quantidade":quantidade}
+                    existe = true
+                    break
+                }
+            }
+
+            // Caso o produto tenha sido adicionado pela primeira vez
+            if(existe == false){
+                carrinho.push({"codigo": indice, "nome":nome, "quantidade":1})
+            }
+
+            // Atualizar o dropdown
+            let listarProdutos = document.getElementById("listarProdutos")
+
+            listarProdutos.innerHTML = ""
+
+            for(let i=0; i<carrinho.length; i++){
+                listarProdutos.innerHTML += "<a class='dropdown-item' href='#''>"
+                    listarProdutos.innerHTML += "<p>Produto: " + carrinho[i].nome + "</p>"
+                    listarProdutos.innerHTML += "<p>Quantidade: " + carrinho[i].quantidade + "</p>"
+                    listarProdutos.innerHTML += "<hr>"
+                listarProdutos.innerHTML += "</a>"
+            }
+
+        }
+    </script>
+
+</head>
+<body>
+
+    <!-- Topo -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">Mercado</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Veja os itens selecionados e suas respectivas quantidades
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="listarProdutos"></div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+    <!-- Exibir produtos -->
+    <div class="container">
+        <div class="row" id="produtos"></div>
+    </div>
+  
+    
+</body>
+</html>

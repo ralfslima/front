@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 05</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <style>
+        input, table{
+            margin-top: 20px;
+        }
+    </style>
+
+    <!-- JS -->
+    <script>
+
+        // JSON de produtos
+        let produtos = []
+
+        // Cadastrar
+        function cadastrar(){
+
+            // Obter dados
+            let produto = document.getElementById("produto").value
+            let marca = document.getElementById("marca").value
+            let valor = document.getElementById("valor").value
+
+            // Adicionar no JSON
+            produtos.push({"produto":produto, "marca":marca, "valor":valor})
+
+            // Listar produtos
+            listar()
+
+        }
+
+        // Listar
+        function listar(){
+            // Obter tabela
+            let tabela = document.getElementById("tabela")
+
+            // Limpar tabela
+            tabela.innerHTML = ""
+
+            // Laço
+            for(let i=0; i<produtos.length; i++){
+                let linha = tabela.insertRow(-1)
+
+                let coluna1 = linha.insertCell(0)
+                let coluna2 = linha.insertCell(1)
+                let coluna3 = linha.insertCell(2)
+                let coluna4 = linha.insertCell(3)
+
+                coluna1.innerHTML = produtos[i].produto
+                coluna2.innerHTML = produtos[i].marca
+                coluna3.innerHTML = produtos[i].valor
+                coluna4.innerHTML = "<button class='btn btn-danger' onClick='remover("+i+")'>Excluir</button>"
+            }
+        }
+
+        // Remover
+        function remover(indice){
+
+            // Remover do JSON
+            produtos.splice(indice , 1)
+
+            // Atualizar listagem
+            listar()
+
+        }
+
+        
+    </script>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-6 offset-3">
+                <input type="text" placeholder="Produto" id="produto" class="form-control">
+                <input type="text" placeholder="Marca" id="marca" class="form-control">
+                <input type="text" placeholder="Valor" id="valor" class="form-control">
+                <input type="button" value="Enviar" class="btn btn-primary" onclick="cadastrar()">
+
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Produto</th>
+                            <th>Marca</th>
+                            <th>Valor</th>
+                            <th>Remover</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tabela"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
