@@ -1,0 +1,18 @@
+{{#if cadastro}}
+    <div>Cadastro efetuado com sucesso!</div>
+{{/if}}
+
+{{#if removido}}
+    <div>Usuário removido com sucesso!</div>
+{{/if}}
+
+<form action="/cadastrar" method="POST">
+    <input type="text" name="usuario" placeholder="Nome">
+    <input type="submit" value="Cadastrar">
+</form>
+
+<ul>
+    {{#each usuarios}}
+        <li>{{nome}} - <a href="/remover/{{@index}}">Excluir</a></li>
+    {{/each}}
+</ul>
