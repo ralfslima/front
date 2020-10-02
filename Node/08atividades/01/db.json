@@ -1,0 +1,15 @@
+{"produtos":[
+    {
+        "id":1,
+        "produto":"Arroz",
+        "marca":"Tio João",
+        "valor":9.80
+    },
+    {
+        "id":2,
+        "produto":"Feijão",
+        "marca":"Urbano",
+        "valor":7.30
+    }
+
+]}

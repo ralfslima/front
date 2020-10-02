@@ -1,0 +1,28 @@
+<form action="/cadastrar" method="post">
+    <input type="text" name="nome" placeholder="Nome">
+    <input type="text" name="nota1" placeholder="Nota1">
+    <input type="text" name="nota2" placeholder="Nota2">
+    <input type="submit" value="Cadastrar">
+</form>
+
+
+{{#if cadastro}}
+<p>Cadastro realizado com sucesso!</p>
+{{/if}}
+
+{{#if exclusao}}
+<p>Removido com sucesso!</p>
+{{/if}}
+
+<table border="1">
+    {{#each alunos}}
+    <tr>
+        <td>{{nome}}</td>
+        <td>{{nota1}}</td>
+        <td>{{nota2}}</td>
+        <td>{{media}}</td>
+        <td>{{situacao}}</td>
+        <td><a href="/remover/{{@index}}">Remover</a></td>
+    </tr>
+    {{/each}}
+</table>

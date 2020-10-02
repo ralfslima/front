@@ -1,0 +1,30 @@
+<form action="/cadastrar" method="post">
+    <input type="text" name="conta" placeholder="Conta">
+    <input type="text" name="valor" placeholder="valor">
+    <input type="date" name="data">
+    <input type="submit" value="Cadastrar">
+</form>
+
+
+{{#if cadastro}}
+<p>Cadastro realizado com sucesso!</p>
+{{/if}}
+
+
+<table border="1">
+    {{#each contas}}
+    <tr>
+        <td>{{conta}}</td>
+        <td>{{valor}}</td>
+        <td>{{data}}</td>
+    </tr>
+    {{/each}}
+</table>
+
+<form action="/filtrar" method="post">
+    <select name="filtro">
+        <option value="1">Maior do menor valor</option>
+        <option value="2">Menor do maior valor</option>
+    </select>
+    <input type="submit" value="Filtrar">
+</form>
