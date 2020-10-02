@@ -1,4 +1,4 @@
-// Importar express
+// Importar o express
 let express = require('express');
 
 // Importar o handlebars
