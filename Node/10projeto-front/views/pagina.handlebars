@@ -1,0 +1,32 @@
+<form action="/cadastrar" method="post" onsubmit="return validaCadastro()">
+    <img src="imagens/usuario.png">
+
+    <input type="text" name="nome" placeholder="Nome" class="form-control" id="nome">
+    <input type="text" name="idade" placeholder="Idade" class="form-control" id="idade">
+    <input type="submit" value="Cadastrar" class="btn btn-primary">
+</form>
+
+<table class="table table-dark table-striped">
+
+    <thead>
+        <tr>
+            <th>Código</th>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Remover</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        {{#each vetor}}
+        <tr>
+            <td>{{id    }}</td>
+            <td>{{nome}}</td>
+            <td>{{idade}}</td>
+            <td><a href="/remover/{{id}}" class="btn btn-danger" onclick="return validaRemover()">Remover</a></td>
+        </tr>
+        {{/each}}
+
+    </tbody>
+</table>
