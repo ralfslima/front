@@ -47,7 +47,7 @@ app.post('/filtrar', (req, res) => {
     if(opcao == 1){
 
         for(let i=0; i<contas.length - 1; i++){
-            for(let i2=1; i2<contas.length; i2++){
+            for(let i2= i+1; i2<contas.length; i2++){
 
                 if(contas[i2].valor < contas[i].valor){
                     let obj = contas[i];
@@ -64,7 +64,7 @@ app.post('/filtrar', (req, res) => {
     if(opcao == 2){
 
         for(let i=0; i<contas.length - 1; i++){
-            for(let i2=1; i2<contas.length; i2++){
+            for(let i2= i+1; i2<contas.length; i2++){
 
                 if(contas[i2].valor > contas[i].valor){
                     let obj = contas[i];
