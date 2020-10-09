@@ -1,0 +1,22 @@
+{
+  "produtos": [
+    {
+      "nome": "Teclado",
+      "marca": "Microsoft",
+      "valor": 150,
+      "id": 1
+    },
+    {
+      "nome": "Mouse",
+      "marca": "HP",
+      "valor": 75,
+      "id": 2
+    },
+    {
+      "nome": "Monitor",
+      "marca": "AOC",
+      "valor": 1790,
+      "id": 3
+    }
+  ]
+}

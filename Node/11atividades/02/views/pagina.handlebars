@@ -1,0 +1,17 @@
+<form action="/cadastrar" method="post">
+    <input type="text" name="nome" placeholder="Receita">
+    <input type="text" name="ingredientes" placeholder="Ingredientes">
+    <input type="text" name="preparo" placeholder="Modo de preparo">
+    <input type="text" name="rendimento" placeholder="Rendimento">
+</form>
+
+
+<ul>
+    {{#each vetor}}
+    <li>
+        <a href="/descricao/{{id}}">
+            {{nome}}
+        </a>
+    </li>
+    {{/each}}
+</ul>

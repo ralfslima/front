@@ -1,0 +1,28 @@
+<form action="/cadastrar" method="post">
+    <input type="text" name="nome" placeholder="Conta" class="form-control">
+    <input type="text" name="marca" placeholder="Marca" class="form-control">
+    <input type="text" name="valor" placeholder="Valor" class="form-control">
+    <input type="submit" value="Cadastrar" class="btn btn-primary">
+</form>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Produto</th>
+            <th>Marca</th>
+            <th>Valor</th>
+            <th>Remover</th>
+        </tr>
+    </thead>
+
+    <tbody>
+    {{#each vetor}}
+    <tr>
+        <td>{{nome}}</td>
+        <td>{{marca}}</td>
+        <td>R$ {{valor}}</td>
+        <td><a href="/remover/{{id}}">Remover</a></td>
+    </tr>
+    {{/each}}
+    </tbody>
+</table>
