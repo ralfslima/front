@@ -36,38 +36,33 @@ app.get('/', (req, res) =>{
     // Obter dados da API
     fetch('http://localhost:3000/musicas', {method:"GET"})
     .then(retorno => retorno.json())
-    .then(dadosDoJson => res.render('pagina', {vetor:dadosDoJson}));
+    .then(dadosDoJson => res.render('pagina', {vetor:dadosDoJson}))
 });
 
-app.get('/descricao/:codigo', (req, res) =>{
-    // Obter dados da API
-    fetch('http://localhost:3000/musicas/'+req.params.codigo, {method:"GET"})
-    .then(retorno => retorno.json())
-    .then(dadosDoJson => res.render('letra', {vetor:dadosDoJson}));
-})
-
-app.post('/cadastrar', (req, res) =>{
+app.post('/pesquisar', (req, res) =>{
     // Obter dados
     let banda = req.body.banda;
     let musica = req.body.musica;
-    let letra = req.body.letra;
 
-    // JSON para efetuar o cadastro
-    let dados = {
-        "banda":banda,
-        "musica":musica,
-        "letra":letra
-    };
-
-    // Enviar para a API
-    fetch('http://localhost:3000/musicas',{
-        method:'POST',
-        body:JSON.stringify(dados),
-        headers:{'Content-Type':'application/json'}
+    // Obter todas as músicas
+    fetch('http://localhost:3000/musicas', {method:"GET"})
+    .then(retorno => retorno.json())
+    .then(retorno => {
+        for(let i=0; i<retorno.length; i++){
+            if(retorno[i].banda == banda && retorno[i].musica == musica){
+                return retorno[i];
+            }
+        }
     })
-    .then(res.redirect('/'));
-});
+    .then(r => {
+        if(r == undefined){
+            res.render('letra', {naoEncontrado:true});
+        }else{
+            res.render('letra', {vetor:r, encontrado:true});
+        }
+    })
 
+})
 
 // Servidor
 app.listen(8080);
