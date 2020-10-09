@@ -1,0 +1,17 @@
+<form action="/cadastrar" method="post">
+    <input type="text" name="banda" placeholder="Banda" class="form-control">
+    <input type="text" name="musica" placeholder="Musica" class="form-control">
+    <textarea name="letra" placeholder="Letra" class="form-control"></textarea>
+    <input type="submit" value="Cadastrar" class="btn btn-primary">
+</form>
+
+
+<ul>
+    {{#each vetor}}
+    <li>
+        <a href="/descricao/{{id}}">
+            {{banda}}
+        </a>
+    </li>
+    {{/each}}
+</ul>

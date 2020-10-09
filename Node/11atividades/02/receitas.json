@@ -1,12 +1,18 @@
 {
-    "receitas" : [
-        {
-            "nome" : "Bolo de chocolate",
-            "ingredientes" : "3 ovos, 1 xícara de óleo, 1 xícara de leite, 2 xícaras de açúcar, 1 xícara de Nescau e 1 colher de fermento.",
-            "preparo" : "Bater todos os ingrendientes no liquidificador e assar em uma forma enfarinhada",
-            "rendimento": 20,
-            "id" : 1
-        }
-    ]
+  "receitas": [
+    {
+      "nome": "Bolo de chocolate",
+      "ingredientes": "3 ovos, 1 xícara de óleo, 1 xícara de leite, 2 xícaras de açúcar, 1 xícara de Nescau e 1 colher de fermento.",
+      "preparo": "Bater todos os ingrendientes no liquidificador e assar em uma forma enfarinhada",
+      "rendimento": 20,
+      "id": 1
+    },
+    {
+      "nome": "Bolo de Cenoura",
+      "ingredientes": "Teste",
+      "preparo": "1",
+      "rendimento": "2",
+      "id": 2
+    }
+  ]
 }
-

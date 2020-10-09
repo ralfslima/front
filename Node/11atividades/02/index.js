@@ -47,12 +47,19 @@ app.get('/descricao/:codigo', (req, res) =>{
 })
 
 app.post('/cadastrar', (req, res) =>{
-    // Obter nome e idade
+    // Obter dados
     let nome = req.body.nome;
-    let idade = req.body.idade;
+    let ingredientes = req.body.ingredientes;
+    let preparo = req.body.preparo;
+    let rendimento = req.body.rendimento;
 
     // JSON para efetuar o cadastro
-    let dados = {"nome":nome, "idade":idade};
+    let dados = {
+        "nome":nome, 
+        "ingredientes":ingredientes,
+        "preparo":preparo,
+        "rendimento":rendimento
+    };
 
     // Enviar para a API
     fetch('http://localhost:3000/receitas',{
