@@ -45,6 +45,15 @@ class Principal extends React.Component{
         this.setState({idade:''});
     }
 
+    // Função para remover
+    remover = (indice) => {
+        let copiaVetor = this.state.vetor;
+
+        copiaVetor.splice(indice, 1);
+
+        this.setState({vetor : copiaVetor});
+    }
+
     // Render
     render(){
         return(
@@ -72,7 +81,7 @@ class Principal extends React.Component{
                             <tr key={linha}>
                                 <td>{pessoa.nome}</td>
                                 <td>{pessoa.idade}</td>
-                                <td>teste...</td>
+                                <td><button onClick={() =>(this.remover(linha)) }>Remover</button></td>
                             </tr>
                         ))}
                     </tbody>
