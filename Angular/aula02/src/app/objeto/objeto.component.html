@@ -1,0 +1,10 @@
+<form>
+    <input type="text" [(ngModel)]="obj.nome" name="nome" placeholder="Nome">
+    <input type="text" [(ngModel)]="obj.valor" name="valor" placeholder="Valor">
+    <input type="text" [(ngModel)]="obj.marca" name="marca" placeholder="Marca">
+    <input type="button" value="Ver objeto" (click)="retorno()">
+</form>
+
+<p>{{obj.nome}}</p>
+<p>{{obj.valor}}</p>
+<p>{{obj.marca}}</p>

@@ -1,0 +1,21 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>postId</th>
+            <th>id</th>
+            <th>name</th>
+            <th>email</th>
+            <th>body</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let linha of vetor">
+            <td>{{linha.postId}}</td>
+            <td>{{linha.id}}</td>
+            <td>{{linha.name}}</td>
+            <td>{{linha.email}}</td>
+            <td>{{linha.body}}</td>
+        </tr>
+    </tbody>
+</table>

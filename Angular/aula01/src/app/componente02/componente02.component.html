@@ -1,0 +1,7 @@
+<button (click) = "alterar()">Alterar páginas</button>
+<hr>
+
+<span *ngIf = "exibirPrimeiraPagina; then pagina1 else pagina2"></span>
+
+<ng-template #pagina1>Primeira Página</ng-template>
+<ng-template #pagina2>Segunda Página</ng-template>
