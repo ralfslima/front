@@ -1,0 +1,25 @@
+<form>
+    <input type="text" placeholder="Nome" name="nome" [(ngModel)]="nome" class="form-control">
+    <input type="number" placeholder="Valor" name="valor" [(ngModel)]="valor" class="form-control">
+    <input type="button" value="Cadastrar" class="btn btn-primary" (click)="cadastrarCurso()">
+</form>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Código</th>
+            <th>Nome</th>
+            <th>Valor</th>
+            <th>Remover</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let c of cursos">
+            <td>{{c.id}}</td>
+            <td>{{c.nome}}</td>
+            <td>{{c.valor}}</td>
+            <td><button class="btn btn-danger" (click)="removerCurso(c.id)">Remover</button></td>
+        </tr>
+    </tbody>
+</table>

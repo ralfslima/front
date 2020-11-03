@@ -1,0 +1,27 @@
+<div class="container">
+
+    <form class="row">
+        <input type="text" placeholder="Informe o Pokémon" name="nome" [(ngModel)]="nome" class="form-control col-11">
+        <input type="button" value="Pesquisar" class="btn btn-primary col-1" (click)="filtrarPokemon()">
+    </form>
+
+    <!-- Quando não houver filtragem -->
+    <div class="row" *ngIf="!filtragem">
+        <div class="col-3" *ngFor="let v of vetor; let i = index">
+            <div class="card">
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{i+1}}.png">
+                {{v.name}}
+            </div>
+        </div>
+    </div>
+
+    <!-- Quando houver filtragem -->
+    <div class="row" *ngIf="filtragem">
+        <div class="col-4 offset-4">
+            <div class="card">
+                <img src="{{vetor.sprites.front_default}}">
+               {{vetor.name}}
+            </div>
+        </div>
+    </div>
+</div>

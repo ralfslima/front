@@ -1,0 +1,9 @@
+<form>
+    <input type="text" placeholder="Nome" name="nome" [(ngModel)]="nome" class="form-control">
+    <input type="number" placeholder="Nota 1" name="nota1" [(ngModel)]="nota1" class="form-control">
+    <input type="number" placeholder="Nota 2" name="nota2" [(ngModel)]="nota2" class="form-control">
+    <input type="number" placeholder="Nota 3" name="nota3" [(ngModel)]="nota3" class="form-control">
+    <input type="button" value="Calcular" class="btn btn-primary" (click)="calcular()">
+</form>
+
+<h1>{{texto}}</h1>

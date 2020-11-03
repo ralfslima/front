@@ -1,0 +1,17 @@
+form{
+    margin-bottom: 40px;
+}
+
+.container{
+    margin-top: 30px;
+}
+
+.card{
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.card img{
+    width: 50%;
+    margin-left: 25%;
+}

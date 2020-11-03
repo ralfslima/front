@@ -1,0 +1,28 @@
+<form>
+    <input type="text" placeholder="Nome" name="nome" [(ngModel)]="nome" class="form-control">
+    <input type="text" placeholder="Marca" name="marca" [(ngModel)]="marca" class="form-control">
+    <input type="number" placeholder="Valor" name="valor" [(ngModel)]="valor" class="form-control">
+    <input type="button" value="Cadastrar" class="btn btn-primary" (click)="cadastrar()">
+</form>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Linha</th>
+            <th>Produto</th>
+            <th>Marca</th>
+            <th>Valor</th>
+            <th>Remover</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let p of produtos; let indice = index">
+            <td>{{indice + 1}}</td>
+            <td>{{p.nome}}</td>
+            <td>{{p.marca}}</td>
+            <td>{{p.valor}}</td>
+            <td><button class="btn btn-danger" (click)="remover(indice)">Remover</button></td>
+        </tr>
+    </tbody>
+</table>
